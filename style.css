@@ -25,9 +25,9 @@
   
   /* Hide all steps by default: */
   .tab {
-    margin-top: 4%;
+    margin-top: 7%;
     display: none;
-    flex-basis: 100%
+    flex-basis: 100%;
   }
   
   /* Make circles that indicate the steps of the form: */
@@ -65,13 +65,15 @@
   }
 
   h {
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 15px;
     font-family: "Codec cold",sans-serif;
+    text-align: center;
   }
 
   button {
     margin-top: 20px;
+    margin: auto;
     background-image: linear-gradient(135deg, #f34079ce 40%, #fc8a4dc2);
     border-radius: 30%;
     width: 100px;
@@ -100,7 +102,7 @@
     .column {
       width: 50%;
     }
-    h {
+    .tab {
       text-align: center;
     }
   }
