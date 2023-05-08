@@ -1,6 +1,6 @@
 /* Style the form */
 #regForm {
-    margin: 100px auto;
+    margin: auto;
     padding: 40px;
     width: 70%;
     min-width: 300px;
@@ -99,5 +99,8 @@
   @media (min-width: 600px) {
     .column {
       width: 50%;
+    }
+    h {
+      text-align: center;
     }
   }
