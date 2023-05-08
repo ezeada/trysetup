@@ -1,2 +1,2 @@
 # trysetup
-Registration form for SetUp
+Registration form for SetUp - takes in user info and adds to firebase database
