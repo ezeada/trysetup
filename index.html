@@ -3,15 +3,18 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
   </head>
         <!-- multistep form -->
         <body>
+          <main>
         <form id="regForm" action="/action_page.php">
 
-            <h1>Try SetUp</h1>
+            <h1>Try Setup</h1>
             
             <!-- One "tab" for each step in the form: -->
-            <div class="tab">Name:
+            <div class="tab">
+              <h>Name:</h>
               <p><input id="firstname" placeholder="First" oninput="this.className = ''"></p>
               <p><input id="lastname" placeholder="Last" oninput="this.className = ''"></p>
             </div>
@@ -67,6 +70,7 @@
             </div>
             
           </form>       
+        </main>
     
     <script type="module" src="script.js"></script>
 </body>
