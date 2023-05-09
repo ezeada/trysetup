@@ -12,15 +12,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-//const auth = getAuth(app);
- 
-
-// Initialize Firebase
-
-//const auth = getAuth(app);
-//const db = getFirestore();
-
-
 
 var currentTab = 0;
 showTab(currentTab);
@@ -87,16 +78,18 @@ function nextPrev(n) {
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") { // add extra validation
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false:
-      valid = false;
+  if (currentTab != 4) {
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByTagName("input");
+    // A loop that checks every input field in the current tab:
+    for (i = 0; i < y.length; i++) {
+      // If a field is empty...
+      if (y[i].value == "") { // add extra validation
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+        // and set the current valid status to false:
+        valid = false;
+      }
     }
   }
   // If the valid status is true, mark the step as finished and valid:
@@ -151,12 +144,7 @@ function createJson(tab) {
     } else if (tab == 2) { // single
         obj.single = document.getElementById('Besetup').checked;
     } else if (tab == 3) { // gender, preferences
-        if (document.getElementById("mangender").checked) {
-            obj.gender = "man";
-        } 
-        if (document.getElementById("womangender").checked) {
-            obj.gender = "woman";
-        }
+        obj.gender = document.getElementById("gender").value;
         obj.preferences = [];
         if (document.getElementById("menpref").checked) {
             obj.preferences.push("men");
