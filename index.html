@@ -10,7 +10,8 @@
           <main>
         <form id="regForm" action="/action_page.php">
 
-            <h1>Try Setup</h1>
+            <h1>Setup</h1>
+            <h2>Join the Waitlist</h2>
             
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
@@ -25,19 +26,20 @@
             </div>
             
             <div class="tab">Set Up or Be Set Up?
-                <input type="checkbox" id="Setup" name="Setup" value="Bike" disabled="disabled" oninput="this.className = ''" checked>
-                <label for="Setup"> Set Up</label><br>
-                <input type="checkbox" id="Besetup" name="Besetup" value="Car" oninput="this.className = ''">
-                <label for="BeSetUp"> Be Set Up</label><br>
+                <input type="radio" id="Setup" name="Setup" value="Bike" oninput="this.className = ''">
+                <label for="Setup"> Just set up others</label><br>
+                <input type="radio" id="Besetup" name="Besetup" value="Car" oninput="this.className = ''">
+                <label for="BeSetUp"> Just be Set Up</label><br>
+                <input type="radio" id="Besetup" name="Besetup" value="Car" oninput="this.className = ''">
+                <label for="BeSetUp"> Set up others + Be set up</label><br>
             </div>
             
             <div class="tab">Identity and Preferences
-                <label for="gender">How do you identify?</label>
-                <input type="checkbox" id="mangender" name="man" value="man" oninput="this.className = ''">
-                <label for="man"> Man</label><br>
-                <input type="checkbox" id="womangender" name="woman" value="woman" oninput="this.className = ''">
-                <label for="woman"> Woman</label><br>
-
+              <label for="gender">How do you identify?</label>
+                <select name="gender" id="gender">
+                  <option value="mangender">Man</option>
+                  <option value="womangender">Woman</option>
+                </select>
                 <label for="preference">Who are you interested in?</label>
                 <input type="checkbox" id="menpref" name="men" value="men" oninput="this.className = ''">
                 <label for="vehicle1"> Men</label><br>
@@ -54,7 +56,7 @@
 
 
             <div style="overflow:auto;">
-              <div style="float:left;margin-top:2%">
+              <div style="position:relative;margin-top:2%;text-align:center">
                 <button type="button" id="prevBtn">Previous</button>
                 <button type="button" id="nextBtn">Next</button>
               </div>
