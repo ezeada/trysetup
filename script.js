@@ -12,10 +12,12 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { getStorage, ref as storage_ref, uploadBytes, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
 
-var currentTab = 2;
+var currentTab = 0;
 showTab(currentTab);
 var obj = new Object();
+var photo = false;
 
 function showTab(n) {
   // This function will display the specified tab of the form
@@ -109,6 +111,43 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 
+function savePhoto() {
+  const storage = getStorage();
+  const file = document.querySelector('#img').files[0]
+  const storageRef = storage_ref(storage, file.name);
+  const name = (+new Date()) + '-' + file.name;
+  const metadata = {
+  contentType: file.type
+  };
+
+  uploadBytes(storageRef, file).then((snapshot) => {
+    console.log('Uploaded file!');
+  
+
+  getDownloadURL(storage_ref(storage, file.name))
+  .then((url) => {
+    // `url` is the download URL for 'images/stars.jpg'
+    const database = getDatabase();
+
+  set(ref(database, 'users/' + Math.floor(Math.random() * 10000000)), {
+    name: obj.name,
+    email: obj.email,
+    number: obj.number,
+    single: obj.single,
+    gender: obj.gender,
+    preferences: obj.preferences,
+    image: url
+  }).then(() => {
+    
+  }).catch((error) => {
+    alert(error)
+  })
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+})
+}
 
 //Send Message to Firebase
 function sendMessage(name, email, number, single, gender, preferences, image) {
@@ -123,17 +162,14 @@ function sendMessage(name, email, number, single, gender, preferences, image) {
     preferences: preferences,
     image: image
   }).then(() => {
-    // //Show Alert Message
-    // document.querySelector('.alert').style.display = 'block';
-    // //Hide Alert Message After Seven Seconds
-    //setTimeout(function () {
-    //document.querySelector('.alert').style.display = 'none';
-    //}, 7000);
-    //document.getElementById('registrationform').reset();
+   
   }).catch((error) => {
     alert(error)
   })
+
 }
+
+
     
 function createJson(tab) {
     if (tab == 0) { // first and last name
@@ -152,10 +188,13 @@ function createJson(tab) {
         if (document.getElementById("womenpref").checked) {
             obj.preferences.push("women");
         } 
-    } else if (tab == 4) { // profile image
-        obj.image = document.getElementById("img");
-        
-    } else if (tab == 5) { // submit
+    } 
+    else if (tab == 4) { // profile image
+        savePhoto();
+        photo = true;
+        obj.image = "";
+
+    } else if (tab == 5 && !photo) { // submit
        sendMessage(obj.name, obj.email, obj.number, obj.single, obj.gender, obj.preferences, obj.image);
     }
 
