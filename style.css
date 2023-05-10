@@ -13,7 +13,7 @@
     width: 100%;
     height: 25px;
     font-size: 19px;
-    font-family: Raleway;
+    font-family: Arial;
     border: 1px solid #aaaaaa;
     filter: drop-shadow(5px 5px 1px rgba(224, 112, 112, 0.608));
   }
@@ -64,20 +64,21 @@
     text-align: center;
     margin-top: -2%;
     margin-bottom: 5%;
-    font-family: Raleway;
+    font-family: Arial;
   }
 
   html {
     height: 100%;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom right, rgba(255, 192, 203, 0.394), rgb(248, 182, 97, 0.394));
+    background-image: white;
+    /* linear-gradient(to bottom right, rgba(255, 192, 203, 0.394), rgb(248, 182, 97, 0.394)); */
   }
 
   h {
     text-align: center;
     font-size: 20px;
     margin-left: 15px;
-    font-family: "Codec cold",sans-serif;
+    font-family: Arial;
   }
 
   button {
@@ -89,7 +90,7 @@
     height: 40px;
     color: white;
     border: none;
-    font-family: "Codec cold",sans-serif;
+    font-family: Arial;
     font-size: 18px;
     text-align:center
   }
@@ -112,6 +113,7 @@
     display: table-cell;
     vertical-align: middle;
   }
+
 
   #title{
     text-align: center;
@@ -137,4 +139,11 @@
       flex-wrap: wrap;
       margin: auto;
     }
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
   }
