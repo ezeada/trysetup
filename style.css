@@ -4,6 +4,7 @@
     padding: 40px;
     width: 70%;
     min-width: 300px;
+    font-family: Arial;
   }
   
   /* Style the input fields */
@@ -43,6 +44,7 @@
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    font-family: Arial;
   }
   
   /* Make circles that indicate the steps of the form: */
@@ -122,14 +124,16 @@
   input[type="radio"] {
     margin-top: -5px;
     vertical-align: middle;
-    width: 100px;
+    border: 0px;
+    width: 30px;
     height: 30px;
   }
 
   input[type="checkbox"] {
     margin-top: -5px;
     vertical-align: middle;
-    width: 100px;
+    border: 0px;
+    width: 30px;
     height: 30px;
   }
 
@@ -143,6 +147,7 @@
   label {
     align-items: center;
     margin-top: 5px;
+    font-family: Arial;
   }
 
   #title{
