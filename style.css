@@ -114,3 +114,10 @@
     margin-bottom: 15px;
     margin-top: -10px;
   }
+
+  label {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 8px;
+  }
