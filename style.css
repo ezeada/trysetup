@@ -15,7 +15,7 @@
     font-size: 19px;
     font-family: Arial;
     border: 1px solid #aaaaaa;
-    filter: drop-shadow(5px 5px 1px rgba(224, 112, 112, 0.608));
+/*     filter: drop-shadow(5px 5px 1px rgba(224, 112, 112, 0.608)); */
   }
   
   /* Mark input boxes that gets an error on validation: */
