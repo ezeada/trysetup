@@ -127,6 +127,5 @@
   @media screen and (max-width: 425px) {
     .tab {
       justify-content: center;
-      flex-wrap: wrap;
     }
   }
