@@ -13,7 +13,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
-var currentTab = 0;
+var currentTab = 2;
 showTab(currentTab);
 var obj = new Object();
 
