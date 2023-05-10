@@ -10,6 +10,7 @@
   input {
     border-radius: 50px;
     padding: 0px;
+    margin: auto;
     width: 100%;
     height: 25px;
     font-size: 19px;
@@ -132,11 +133,11 @@
     padding: 0px 1em 0px 8px;
   } */
 
-  @media screen and (max-width: 425px) {
+  /* @media screen and (max-width: 425px) {
     .tab {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin: auto;
     }
-  }
+  } */
