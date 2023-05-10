@@ -14,7 +14,7 @@ const app = initializeApp(firebaseConfig);
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 import { getStorage, ref as storage_ref, uploadBytes, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
 
-var currentTab = 3;
+var currentTab = 0;
 showTab(currentTab);
 var obj = new Object();
 var photo = false;
@@ -69,6 +69,9 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
+    if (document.querySelector('#img').files[0] != null) {
+      photo = true;
+    }
     currentTab = currentTab + n;
     //document.getElementById("regForm").submit();
     return false;
@@ -192,9 +195,8 @@ function createJson(tab) {
           obj.preferences.push("other");
       } 
     } 
-    else if (tab == 4) { // profile image
+    else if (tab == 4 && photo) { // profile image
         savePhoto();
-        photo = true;
         obj.image = "";
 
     } else if (tab == 5 && !photo) { // submit
