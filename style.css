@@ -7,16 +7,27 @@
   }
   
   /* Style the input fields */
-  input {
+  input{
+    font-size: 19px;
+    font-family: Arial;
+    border: 1px solid #aaaaaa;
+    filter: drop-shadow(5px 5px 1px rgba(224, 112, 112, 0.608));
+  }
+
+  input[type="text"] {
     border-radius: 50px;
     padding: 5px;
     margin: auto;
     width: 100%;
     height: 50px;
-    font-size: 19px;
-    font-family: Arial;
-    border: 1px solid #aaaaaa;
-    filter: drop-shadow(5px 5px 1px rgba(224, 112, 112, 0.608));
+  }
+
+  input[type="tel"] {
+    border-radius: 50px;
+    padding: 5px;
+    margin: auto;
+    width: 100%;
+    height: 50px;
   }
   
   /* Mark input boxes that gets an error on validation: */
@@ -31,6 +42,7 @@
     flex-basis: 100%;
     width: 80%;
     margin: 0 auto;
+    text-align: center;
   }
   
   /* Make circles that indicate the steps of the form: */
@@ -106,15 +118,32 @@
     zoom: 1.0 ;
   }
 
-  /* .column {
-    width: 100%;
-  } */
   
   input[type="radio"] {
-    display: table-cell;
+    margin-top: -5px;
     vertical-align: middle;
+    width: 100px;
+    height: 30px;
   }
 
+  input[type="checkbox"] {
+    margin-top: -5px;
+    vertical-align: middle;
+    width: 100px;
+    height: 30px;
+  }
+
+  fieldset {
+    display: inline-grid;
+    line-height: 1;
+    text-align: left;
+    border: none;
+  }
+
+  label {
+    align-items: center;
+    margin-top: 5px;
+  }
 
   #title{
     text-align: center;
@@ -126,18 +155,3 @@
   .input {
     margin-left: auto;
   }
-  /* label {
-    float: left;
-    clear: none;
-    display: block;
-    padding: 0px 1em 0px 8px;
-  } */
-
-  /* @media screen and (max-width: 425px) {
-    .tab {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: auto;
-    }
-  } */
