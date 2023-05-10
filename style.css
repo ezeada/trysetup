@@ -14,6 +14,7 @@
     height: 25px;
     font-size: 19px;
     font-family: Raleway;
+    justify-content: center;
     border: 1px solid #aaaaaa;
     filter: drop-shadow(5px 5px 1px rgba(224, 112, 112, 0.608));
   }
