@@ -142,6 +142,7 @@
     line-height: 1;
     text-align: left;
     border: none;
+    white-space:nowrap;
   }
 
   label {
