@@ -14,7 +14,7 @@ const app = initializeApp(firebaseConfig);
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 import { getStorage, ref as storage_ref, uploadBytes, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
 
-var currentTab = 0;
+var currentTab = 3;
 showTab(currentTab);
 var obj = new Object();
 var photo = false;
@@ -188,6 +188,9 @@ function createJson(tab) {
         if (document.getElementById("womenpref").checked) {
             obj.preferences.push("women");
         } 
+        if (document.getElementById("other").checked) {
+          obj.preferences.push("other");
+      } 
     } 
     else if (tab == 4) { // profile image
         savePhoto();
