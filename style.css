@@ -14,7 +14,6 @@
     height: 25px;
     font-size: 19px;
     font-family: Raleway;
-    justify-content: center;
     border: 1px solid #aaaaaa;
     filter: drop-shadow(5px 5px 1px rgba(224, 112, 112, 0.608));
   }
@@ -63,6 +62,9 @@
 
   h2 {
     text-align: center;
+    margin-top: -2%;
+    margin-bottom: 5%;
+    font-family: Raleway;
   }
 
   html {
@@ -102,9 +104,9 @@
     zoom: 1.0 ;
   }
 
-  .column {
+  /* .column {
     width: 100%;
-  }
+  } */
   
   input[type="radio"] {
     display: table-cell;
@@ -118,6 +120,9 @@
     margin-top: -10px;
   }
 
+  .input {
+    margin: auto;
+  }
   /* label {
     float: left;
     clear: none;
@@ -127,11 +132,9 @@
 
   @media screen and (max-width: 425px) {
     .tab {
+      display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      margin: auto;
     }
-  }
-
-  .input {
-    text-align: center;
-     justify-content: center;
   }
