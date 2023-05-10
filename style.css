@@ -123,3 +123,11 @@
     display: block;
     padding: 0px 1em 0px 8px;
   } */
+
+  @media screen and (max-width: 425px) {
+    .tab {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
