@@ -163,7 +163,6 @@ function sendMessage(name, email, number, single, gender, preferences, image) {
     single: single,
     gender: gender,
     preferences: preferences,
-    image: image
   }).then(() => {
    
   }).catch((error) => {
