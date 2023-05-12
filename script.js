@@ -191,9 +191,6 @@ function createJson(tab) {
         if (document.getElementById("womenpref").checked) {
             obj.preferences.push("women");
         } 
-        if (document.getElementById("other").checked) {
-          obj.preferences.push("other");
-      } 
     } 
     else if (tab == 4 && photo) { // profile image
         savePhoto();
